@@ -34,7 +34,7 @@ public class TarefasAPI {
 
     @GetMapping("/{tarefaId}") // Recebe uma requisição GET, com um id por parametro
     @ResponseBody // Devolve um arquivo JSON
-    public List<TarefaDTO> getAll(@PathVariable("tarefaId")Long tarefaId){
+    public List<TarefaDTO> get(@PathVariable("tarefaId")Long tarefaId){
         TarefaDTO tarefaData = tarefasFacade.findById(tarefaId);
         List <TarefaDTO> tarefaAtual = new ArrayList<>();
         if(tarefaData != null){

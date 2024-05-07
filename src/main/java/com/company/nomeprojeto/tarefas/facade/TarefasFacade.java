@@ -26,7 +26,7 @@ public class TarefasFacade {
         return tarefaDTO;
     }
 
-    public TarefaDTO getById(Long tarefaId){
+    public TarefaDTO findById(Long tarefaId){
         // Retorna a tarefa com o id passado por parametro
         return tarefas.get(tarefaId);
     }
@@ -38,5 +38,9 @@ public class TarefasFacade {
     public String delete(Long tarefaId){
         tarefas.remove(tarefaId);
         return "DELETED";
+    }
+
+    public Map<Long, TarefaDTO> getAllTarefas(){
+        return tarefas;
     }
 }

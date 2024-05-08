@@ -28,15 +28,18 @@
       <option name="ignoredModules">
         <list>
           <option value="apijavasimples" />
+          <option value="apijavasimples" />
         </list>
       </option>
       <option name="ignoredPackages">
         <list>
           <option value="org.springframework:spring-beans:5.3.8" />
+          <option value="com.jayway.jsonpath:json-path:2.4.0" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
+          <option value="other" />
           <option value="other" />
         </list>
       </option>

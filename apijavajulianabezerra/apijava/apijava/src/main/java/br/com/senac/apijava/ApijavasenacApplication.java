@@ -1,5 +1,9 @@
 package br.com.senac.apijava;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -48,7 +52,7 @@ class Demo {
 }
 
 @RestController
-@RequestMapping("/demo")
+@RequestMapping("/api/v1")
 class DemoController {
 
     DemoService demoService;
@@ -60,13 +64,18 @@ class DemoController {
         this.demoService = demoService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/demo/{id}")
     public Demo getDemo(@PathVariable("id") Long id){
         return demoService.getDemo(id).orElse(null);
     }
 
+    @GetMapping("/demo")
+    public List<Demo> getAllDemo(){
+        return demoRepository.findAll();
+    }
+
     // salvar conta
-    @PostMapping("/save")
+    @PostMapping("/demo/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Demo createCadastro(@RequestBody Demo cadastro) {
 
@@ -87,6 +96,10 @@ class DemoService{
 
     public Optional<Demo> getDemo(Long id){
         return demoRepository.findById(id);
+    }
+
+    public List<Demo> getAllDemo(){
+        return demoRepository.findAll();
     }
 }
 

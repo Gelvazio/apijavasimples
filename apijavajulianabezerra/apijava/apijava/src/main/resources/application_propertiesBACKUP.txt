@@ -1,0 +1,20 @@
+spring.application.name=apijavasenac
+
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.datasource.username=postgres.zgywkcusltbxpewwavqp
+
+#GITHUB.COM/GELVAZIO
+# spring.datasource.password=1jzuUyFOVupLDhIG
+
+# GELVAZIO@GMAIL.COM
+# spring.datasource.password=qjCquYsdiEjFjVdk
+
+# gelvaziosenac2022@gmail.com
+# senha supabase: *.KSM4wqxL!@fmW
+# SENHA BANCO DE DADOS
+# spring.datasource.password=FQ@xLh~?4a7ppuL
+
+spring.datasource.url=jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:5432/postgres
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
